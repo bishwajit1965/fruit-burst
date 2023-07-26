@@ -42,19 +42,21 @@
   </head>
   <body>
     <!-- Header section begins -->
-    <header class="hide-content">
+    <header class="hide-contents">
       <!-- Navigation section begins -->
       <section class="lg:px-44 mx-auto">
-        <!-- Navigation -->
+        <!-- Navbar -->
         <div
-          class="navbar lg:bg-[#F85559] rounded-full md:my-10 lg:text-white lg:px-5"
+          class="navbar lg:bg-[#F85559] rounded-full md:my-8 lg:text-white lg:px-5 bg-base-100"
         >
-          <div class="navbar-start">
-            <div class="dropdown text-slate-900">
+          <div
+            class="navbar-start navbar-end flex-row-reverse lg:order-1 order-3"
+          >
+            <div class="dropdown">
               <label tabindex="0" class="btn btn-ghost lg:hidden">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-6 w-6 lg:text-white"
+                  class="h-5 w-5"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -69,251 +71,245 @@
               </label>
               <ul
                 tabindex="0"
-                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box"
+                class="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box absolute right-0 w-52 bg-white border border-gray-300 z-50"
               >
                 <li><a>Home</a></li>
-                <li><a>About Us</a></li>
+                <li><a>About us</a></li>
                 <li><a>Shop</a></li>
-                <li><a>All Fruits</a></li>
+                <li><a>AllFruits</a></li>
               </ul>
             </div>
 
-            <div class="space-x-5 invisible md:visible">
-              <a href="#">Home</a>
-              <a href="#">About Us</a>
-              <a href="#">Shop</a>
-              <a href="#">All Fruits</a>
-            </div>
+            <ul class="menu menu-horizontal px-1 hidden lg:flex flex-start">
+              <li><a>Home</a></li>
+              <li><a>About us</a></li>
+              <li><a>Shop</a></li>
+              <li><a>AllFruits</a></li>
+            </ul>
           </div>
-
-          <div class="navbar-center lg:flex">
-            <ul class="menu menu-horizontal px-1 items-center space-x-3">
-              <img src="./images/logo.png" alt="" class="h-9" />
+          <div class="navbar-center lg:flex lg:order-2">
+            <ul class="menu menu-horizontal items-center space-x-3">
+              <img src="./images/logo.png" alt="" class="h-8" />
               <h4 class="font-extrabold">Fruit Burst</h4>
             </ul>
           </div>
-
-          <div class="navbar-end invisible md:visible">
-            <div class="relative">
-              <input
-                type="text"
-                placeholder="Search..."
-                class="bg-white text-white rounded-full pl-4 pr-4 py-2 focus:outline-none focus:ring focus:border-indigo-300"
-              />
-              <div
-                class="absolute top-1/2 transform -translate-y-1/2 right-3 text-gray-400"
-              >
-                <i class="fa fa-search pt-1"></i>
-              </div>
+          <div class="navbar-end relative invisible md:visible lg:order-3">
+            <input
+              type="text"
+              placeholder="Search..."
+              class="bg-white text-white rounded-full py-1 px-4 focus:outline-none focus:ring focus:border-indigo-300"
+            />
+            <div
+              class="absolute top-1/2 transform -translate-y-1/2 right-3 text-gray-400"
+            >
+              <i class="fa fa-search pt-1"></i>
             </div>
           </div>
         </div>
-        <!-- ./Navigation -->
+        <!-- ./Navbar -->
 
         <!-- Carousal banner section begins -->
-        <div class=" ">
-          <div class="carousel -z-20 w-full">
+        <!-- <div class=" "> -->
+        <div class="carousel w-full bg-red-500">
+          <div
+            id="slide1"
+            class="carousel-item relative w-full bg-slider-one-bg"
+          >
             <div
-              id="slide1"
-              class="carousel-item relative w-full bg-slider-one-bg"
+              class="absolute top-0 left-0 w-full h-full bg-black opacity-50 group-hover:opacity-0 transition-opacity rounded-md"
+            ></div>
+            <div
+              class="flex items-center h-full mx-auto text-center text-white"
             >
-              <div
-                class="absolute top-0 left-0 w-full h-full bg-black opacity-50 group-hover:opacity-0 transition-opacity rounded-md"
-              ></div>
-              <div
-                class="flex items-center h-full mx-auto text-center text-white"
-              >
-                <div class="space-y-5 z-10">
-                  <div class="avatar">
-                    <div class="w-24 h-24 rounded-full border-4">
-                      <img src="./images/fruit1.png" />
-                    </div>
+              <div class="space-y-5 z-10">
+                <div class="avatar">
+                  <div class="w-24 h-24 rounded-full border-4">
+                    <img src="./images/fruit1.png" />
                   </div>
-
-                  <h4 class="lg:text-4xl text-2xl font-extrabold">
-                    Fruit Paradise: Nature's Sweet Treats
-                  </h4>
-                  <p class="text-1xl">Juicy and Nutritious</p>
-                  <p class="lg:w-1/2 mx-auto text-xs">
-                    Welcome to our fruit paradise! We take pride in offering a
-                    wide variety of fresh, juicy, and ripe fruits sourced
-                    directly from local farms. From succulent mangoes to crisp
-                    apples and zesty oranges, our fruits are bursting with
-                    flavor and nutrients. Explore our selection and indulge in
-                    the goodness of nature's sweet treats.
-                  </p>
-
-                  <button
-                    class="btn bg-[#F85559] capitalize text-white border-0 hover:text-amber-600"
-                  >
-                    shop now
-                  </button>
                 </div>
-              </div>
-              <div
-                class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 z-10"
-              >
-                <a href="#slide4" class="btn btn-circle">❮</a>
-                <a href="#slide2" class="btn btn-circle">❯</a>
+
+                <h4 class="lg:text-4xl text-2xl font-extrabold">
+                  Fruit Paradise: Nature's Sweet Treats
+                </h4>
+                <p class="text-1xl">Juicy and Nutritious</p>
+                <p class="lg:w-1/2 mx-auto text-xs">
+                  Welcome to our fruit paradise! We take pride in offering a
+                  wide variety of fresh, juicy, and ripe fruits sourced directly
+                  from local farms. From succulent mangoes to crisp apples and
+                  zesty oranges, our fruits are bursting with flavor and
+                  nutrients. Explore our selection and indulge in the goodness
+                  of nature's sweet treats.
+                </p>
+
+                <button
+                  class="btn bg-[#F85559] capitalize text-white border-0 hover:text-amber-600"
+                >
+                  shop now
+                </button>
               </div>
             </div>
             <div
-              id="slide2"
-              class="carousel-item relative w-full bg-slider-two-bg"
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 z-10"
             >
-              <div
-                class="absolute top-0 left-0 w-full h-full bg-black opacity-50 group-hover:opacity-0 transition-opacity rounded-md"
-              ></div>
-              <div
-                class="flex items-center h-full mx-auto text-center text-white"
-              >
-                <div class="space-y-5 z-10">
-                  <div class="avatar">
-                    <div class="w-24 h-24 rounded-full border-4">
-                      <img src="./images/fruit2.png" />
-                    </div>
-                  </div>
-
-                  <h4 class="lg:text-4xl text-2xl font-extrabold">
-                    Freshness Delivered to Your Doorstep
-                  </h4>
-                  <p class="text-1xl">Farm-to-Table Freshness</p>
-                  <p class="lg:w-1/2 mx-auto text-xs">
-                    Taste the goodness of nature with every bite! Our fruit
-                    seller site brings you the freshest and most delicious
-                    fruits at your doorstep. Whether you crave the tropical
-                    allure of pineapples or the refreshing taste of watermelons,
-                    we've got it all. Sourced with care and delivered with love,
-                    our fruits are a delightful addition to your healthy
-                    lifestyle.
-                  </p>
-                  <button
-                    class="btn bg-[#F85559] capitalize text-white border-0 hover:text-amber-600"
-                  >
-                    shop now
-                  </button>
-                </div>
-              </div>
-              <div
-                class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 z-10"
-              >
-                <a href="#slide1" class="btn btn-circle">❮</a>
-                <a href="#slide3" class="btn btn-circle">❯</a>
-              </div>
-            </div>
-            <div
-              id="slide3"
-              class="carousel-item relative w-full bg-slider-three-bg"
-            >
-              <div
-                class="absolute top-0 left-0 w-full h-full bg-black opacity-50 group-hover:opacity-0 transition-opacity rounded-md"
-              ></div>
-              <div
-                class="flex items-center h-full mx-auto text-center text-white"
-              >
-                <div class="space-y-5 z-10">
-                  <div class="avatar">
-                    <div class="w-24 h-24 rounded-full border-4">
-                      <img src="./images/fruit3.png" />
-                    </div>
-                  </div>
-
-                  <h4 class="lg:text-4xl text-2xl font-extrabold">
-                    Taste the Bounty of Nature
-                  </h4>
-                  <p class="text-1xl">A Tropical Delight</p>
-                  <p class="lg:w-1/2 mx-auto text-xs">
-                    Elevate your fruit experience with us! Our fruit seller site
-                    is your gateway to a delightful culinary adventure. Savor
-                    the luscious sweetness of strawberries, relish the tangy
-                    burst of blueberries, and experience the exotic allure of
-                    dragon fruits. Each bite is a journey into the world of
-                    flavors, carefully selected to please your taste buds.
-                  </p>
-                  <button
-                    class="btn bg-[#F85559] capitalize text-white border-0 hover:text-amber-600"
-                  >
-                    shop now
-                  </button>
-                </div>
-              </div>
-              <div
-                class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 z-10"
-              >
-                <a href="#slide2" class="btn btn-circle">❮</a>
-                <a href="#slide4" class="btn btn-circle">❯</a>
-              </div>
-            </div>
-            <div
-              id="slide4"
-              class="carousel-item relative w-full bg-slider-one-bg"
-            >
-              <div
-                class="absolute top-0 left-0 w-full h-full bg-black opacity-50 group-hover:opacity-0 transition-opacity rounded-md"
-              ></div>
-              <div
-                class="flex items-center h-full mx-auto text-center text-white"
-              >
-                <div class="space-y-5 z-10">
-                  <div class="avatar">
-                    <div class="w-24 h-24 rounded-full border-4">
-                      <img src="./images/fruit4.png" />
-                    </div>
-                  </div>
-
-                  <h4 class="lg:text-4xl text-2xl font-extrabold">
-                    Exotic Fruits for Healthy Indulgence
-                  </h4>
-                  <p class="text-1xl">Nature's Sweet Goodness</p>
-                  <p class="lg:w-1/2 mx-auto text-xs">
-                    Freshness and quality, our promise to you! At our fruit
-                    seller site, we believe in offering only the best. Every
-                    fruit you order undergoes rigorous quality checks to ensure
-                    it reaches you in its prime. From seasonal favorites to rare
-                    delights, our selection caters to all your fruity desires.
-                    Satisfy your cravings and treat yourself to nature's finest
-                    gifts.
-                  </p>
-                  <button
-                    class="btn bg-[#F85559] capitalize text-white border-0 hover:text-amber-600"
-                  >
-                    shop now
-                  </button>
-                </div>
-              </div>
-              <div
-                class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 z-10"
-              >
-                <a href="#slide3" class="btn btn-circle">❮</a>
-                <a href="#slide1" class="btn btn-circle">❯</a>
-              </div>
+              <a href="#slide4" class="btn btn-circle">❮</a>
+              <a href="#slide2" class="btn btn-circle">❯</a>
             </div>
           </div>
           <div
-            class="relative -top-20 w-10/12 mx-auto grid grid-cols-5 justify-between gap-4 items-center invisible lg:visible shadow-lg bg-white rounded-md px-2 py-4"
+            id="slide2"
+            class="carousel-item relative w-full bg-slider-two-bg"
           >
-            <div class="flex-1 text-center">
-              <img src="./images/fruit1.png" class="" alt="fruits" />
-              <p class="text-xs">Grapes</p>
+            <div
+              class="absolute top-0 left-0 w-full h-full bg-black opacity-50 group-hover:opacity-0 transition-opacity rounded-md"
+            ></div>
+            <div
+              class="flex items-center h-full mx-auto text-center text-white"
+            >
+              <div class="space-y-5 z-10">
+                <div class="avatar">
+                  <div class="w-24 h-24 rounded-full border-4">
+                    <img src="./images/fruit2.png" />
+                  </div>
+                </div>
+
+                <h4 class="lg:text-4xl text-2xl font-extrabold">
+                  Freshness Delivered to Your Doorstep
+                </h4>
+                <p class="text-1xl">Farm-to-Table Freshness</p>
+                <p class="lg:w-1/2 mx-auto text-xs">
+                  Taste the goodness of nature with every bite! Our fruit seller
+                  site brings you the freshest and most delicious fruits at your
+                  doorstep. Whether you crave the tropical allure of pineapples
+                  or the refreshing taste of watermelons, we've got it all.
+                  Sourced with care and delivered with love, our fruits are a
+                  delightful addition to your healthy lifestyle.
+                </p>
+                <button
+                  class="btn bg-[#F85559] capitalize text-white border-0 hover:text-amber-600"
+                >
+                  shop now
+                </button>
+              </div>
             </div>
-            <div class="flex-1 text-center">
-              <img src="./images/fruit2.png" class="" alt="fruits" />
-              <p class="text-xs">Oranges</p>
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 z-10"
+            >
+              <a href="#slide1" class="btn btn-circle">❮</a>
+              <a href="#slide3" class="btn btn-circle">❯</a>
             </div>
-            <div class="flex-1 text-center">
-              <img src="./images/fruit3.png" class="" alt="fruits" />
-              <p class="text-xs">Mangoes</p>
+          </div>
+          <div
+            id="slide3"
+            class="carousel-item relative w-full bg-slider-three-bg"
+          >
+            <div
+              class="absolute top-0 left-0 w-full h-full bg-black opacity-50 group-hover:opacity-0 transition-opacity rounded-md"
+            ></div>
+            <div
+              class="flex items-center h-full mx-auto text-center text-white"
+            >
+              <div class="space-y-5 z-10">
+                <div class="avatar">
+                  <div class="w-24 h-24 rounded-full border-4">
+                    <img src="./images/fruit3.png" />
+                  </div>
+                </div>
+
+                <h4 class="lg:text-4xl text-2xl font-extrabold">
+                  Taste the Bounty of Nature
+                </h4>
+                <p class="text-1xl">A Tropical Delight</p>
+                <p class="lg:w-1/2 mx-auto text-xs">
+                  Elevate your fruit experience with us! Our fruit seller site
+                  is your gateway to a delightful culinary adventure. Savor the
+                  luscious sweetness of strawberries, relish the tangy burst of
+                  blueberries, and experience the exotic allure of dragon
+                  fruits. Each bite is a journey into the world of flavors,
+                  carefully selected to please your taste buds.
+                </p>
+                <button
+                  class="btn bg-[#F85559] capitalize text-white border-0 hover:text-amber-600"
+                >
+                  shop now
+                </button>
+              </div>
             </div>
-            <div class="flex-1 text-center">
-              <img src="./images/fruit4.png" class="" alt="fruits" />
-              <p class="text-xs">Strawberries</p>
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 z-10"
+            >
+              <a href="#slide2" class="btn btn-circle">❮</a>
+              <a href="#slide4" class="btn btn-circle">❯</a>
             </div>
-            <div class="flex-1 text-center">
-              <img src="./images/fruit5.png" class="" alt="fruits" />
-              <p class="text-xs">Pomegranate</p>
+          </div>
+          <div
+            id="slide4"
+            class="carousel-item relative w-full bg-slider-one-bg"
+          >
+            <div
+              class="absolute top-0 left-0 w-full h-full bg-black opacity-50 group-hover:opacity-0 transition-opacity rounded-md"
+            ></div>
+            <div
+              class="flex items-center h-full mx-auto text-center text-white"
+            >
+              <div class="space-y-5 z-10">
+                <div class="avatar">
+                  <div class="w-24 h-24 rounded-full border-4">
+                    <img src="./images/fruit4.png" />
+                  </div>
+                </div>
+
+                <h4 class="lg:text-4xl text-2xl font-extrabold">
+                  Exotic Fruits for Healthy Indulgence
+                </h4>
+                <p class="text-1xl">Nature's Sweet Goodness</p>
+                <p class="lg:w-1/2 mx-auto text-xs">
+                  Freshness and quality, our promise to you! At our fruit seller
+                  site, we believe in offering only the best. Every fruit you
+                  order undergoes rigorous quality checks to ensure it reaches
+                  you in its prime. From seasonal favorites to rare delights,
+                  our selection caters to all your fruity desires. Satisfy your
+                  cravings and treat yourself to nature's finest gifts.
+                </p>
+                <button
+                  class="btn bg-[#F85559] capitalize text-white border-0 hover:text-amber-600"
+                >
+                  shop now
+                </button>
+              </div>
+            </div>
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 z-10"
+            >
+              <a href="#slide3" class="btn btn-circle">❮</a>
+              <a href="#slide1" class="btn btn-circle">❯</a>
             </div>
           </div>
         </div>
+        <div
+          class="relative -top-20 w-10/12 mx-auto grid grid-cols-5 justify-between gap-4 items-center invisible lg:visible shadow-lg bg-white rounded-md px-2 py-4"
+        >
+          <div class="flex-1 text-center">
+            <img src="./images/fruit1.png" class="" alt="fruits" />
+            <p class="text-xs">Grapes</p>
+          </div>
+          <div class="flex-1 text-center">
+            <img src="./images/fruit2.png" class="" alt="fruits" />
+            <p class="text-xs">Oranges</p>
+          </div>
+          <div class="flex-1 text-center">
+            <img src="./images/fruit3.png" class="" alt="fruits" />
+            <p class="text-xs">Mangoes</p>
+          </div>
+          <div class="flex-1 text-center">
+            <img src="./images/fruit4.png" class="" alt="fruits" />
+            <p class="text-xs">Strawberries</p>
+          </div>
+          <div class="flex-1 text-center">
+            <img src="./images/fruit5.png" class="" alt="fruits" />
+            <p class="text-xs">Pomegranate</p>
+          </div>
+        </div>
+        <!-- </div> -->
 
         <!-- ./Carousal banner section ends -->
       </section>
@@ -322,9 +318,9 @@
     <!-- ./Header section ends -->
 
     <!-- Main section begins -->
-    <main class="max-w-screen-xl lg:mx-44 p-2">
+    <main class="max-w-screen-xl lg:mx-44 mt-12 p-2">
       <!-- Deal of the day section begins -->
-      <section class="">
+      <section>
         <div class="lg:flex lg:justify-between grid">
           <div class="space-y-6 flex-1">
             <h1 class="lg:text-4xl lg:text-left text-center font-extrabold">
@@ -373,9 +369,9 @@
           </div>
         </div>
         <div
-          class="lg:grid lg:grid-cols-4 grid-cols-1 gap-4 justify-between mt-6"
+          class="lg:grid lg:grid-cols-4 grid-cols-1 gap-4 justify-between mt-5"
         >
-          <div class="card bg-base-100 shadow-xl">
+          <div class="card bg-base-100 shadow-xl mb-3">
             <figure class="px-10 pt-10">
               <img src="./images/fruit6.png" alt="Fruit" class="rounded-xl" />
             </figure>
@@ -392,7 +388,7 @@
                 <i class="fa fa-star-half text-amber-300"></i>
               </div>
               <button
-                class="btn flex mx-auto mt-2"
+                class="btn flex mx-auto mt-2 btn-sm text-red-500"
                 onclick="my_modal_1.showModal()"
               >
                 Details
@@ -437,7 +433,7 @@
             </form>
           </dialog>
           <!-- ./Modal -->
-          <div class="card bg-base-100 shadow-xl">
+          <div class="card bg-base-100 shadow-xl mb-3">
             <figure class="px-10 pt-10">
               <img src="./images/fruit7.png" alt="Fruit" class="rounded-xl" />
             </figure>
@@ -452,7 +448,7 @@
                 <i class="fa fa-star-half text-amber-300"></i>
               </div>
               <button
-                class="btn flex-flow-col mx-auto mt-2"
+                class="btn flex-flow-col mx-auto mt-2 btn-sm text-red-500"
                 onclick="my_modal_2.showModal()"
               >
                 Details
@@ -498,7 +494,7 @@
           </dialog>
           <!-- ./Modal -->
 
-          <div class="card bg-base-100 shadow-xl">
+          <div class="card bg-base-100 shadow-xl mb-3">
             <figure class="px-10 pt-10">
               <img src="./images/fruit8.png" alt="Fruit" class="rounded-xl" />
             </figure>
@@ -513,7 +509,7 @@
                 <i class="fa fa-star-half text-amber-300"></i>
               </div>
               <button
-                class="btn flex mx-auto mt-2"
+                class="btn flex mx-auto mt-2 btn-sm text-red-500"
                 onclick="my_modal_3.showModal()"
               >
                 Details
@@ -558,7 +554,7 @@
             </form>
           </dialog>
           <!-- ./Modal -->
-          <div class="card bg-base-100 shadow-xl">
+          <div class="card bg-base-100 shadow-xl mb-3">
             <figure class="px-10 pt-10">
               <img src="./images/fruit9.png" alt="Fruit" class="rounded-xl" />
             </figure>
@@ -573,7 +569,7 @@
                 <i class="fa fa-star-half text-amber-300"></i>
               </div>
               <button
-                class="btn flex mx-auto mt-2"
+                class="btn flex mx-auto mt-2 btn-sm text-red-500"
                 onclick="my_modal_4.showModal()"
               >
                 Details
@@ -620,18 +616,18 @@
           </dialog>
           <!-- ./Modal -->
         </div>
-        <div class="flex justify-center mt-12">
+        <div class="flex justify-center lg:mt-12 mt-5">
           <button
             class="btn bg-[#F85559] capitalize text-white border-0 hover:text-amber-600"
           >
-            shop all
+            shop all <i class="fa fa-shopping-cart"></i>
           </button>
         </div>
       </section>
       <!-- ./Deal of the day section ends -->
 
       <!-- Meet the team member section begins -->
-      <section class="max-w-screen-xl mx-auto lg:mt-20 p-2">
+      <section class="max-w-screen-xl mx-auto lg:mt-20 mt-5">
         <div class="meet-the-team bg-slider-one-bg relative">
           <div
             class="absolute top-0 left-0 w-full h-full bg-black opacity-50 group-hover:opacity-0 transition-opacity rounded-md"
@@ -768,8 +764,8 @@
       </section>
       <!-- ./Meet the team member section ends -->
 
-      <!--Whu choose us section section begins -->
-      <section class="max-w-screen-xl mx-auto lg:mt-20 p-2">
+      <!--Why choose us section section begins -->
+      <section class="max-w-screen-xl mx-auto lg:mt-20 mt-5">
         <div class="text-center space-y-6">
           <h1 class="text-4xl font-extrabold">Why Choose Us</h1>
           <p class="text-sm">
@@ -791,10 +787,10 @@
               <div class="lg:flex lg:items-center text-center space-x-2">
                 <div class="lg:flex lg:justify-start grid justify-center">
                   <div
-                    class="w-10 h-10 rounded-full bg-[#E7E7E7] flex justify-center items-center"
+                    class="lg:w-10 lg:h-10 w-20 h-20 rounded-full bg-[#E7E7E7] flex justify-center items-center"
                   >
                     <i
-                      class="fa fa-users text-[#909090] flex justify-center"
+                      class="fa fa-users text-[#909090] flex justify-center lg:text-base text-4xl"
                     ></i>
                   </div>
                 </div>
@@ -817,10 +813,10 @@
               <div class="lg:flex lg:items-center text-center space-x-2">
                 <div class="lg:flex lg:justify-start grid justify-center">
                   <div
-                    class="w-10 h-10 rounded-full bg-[#E7E7E7] flex justify-center items-center"
+                    class="lg:w-10 lg:h-10 w-20 h-20 rounded-full bg-[#E7E7E7] flex justify-center items-center"
                   >
                     <i
-                      class="fa fa-certificate text-[#909090] flex justify-center"
+                      class="fa fa-certificate text-[#909090] flex justify-center lg:text-base text-4xl"
                     ></i>
                   </div>
                 </div>
@@ -844,10 +840,10 @@
               <div class="lg:flex lg:items-center text-center space-x-2">
                 <div class="lg:flex lg:justify-start grid justify-center">
                   <div
-                    class="w-10 h-10 rounded-full bg-[#E7E7E7] flex justify-center items-center"
+                    class="lg:w-10 lg:h-10 w-20 h-20 rounded-full bg-[#E7E7E7] flex justify-center items-center"
                   >
                     <i
-                      class="fa fa-gear text-[#909090] flex justify-center"
+                      class="fa fa-gear text-[#909090] flex justify-center lg:text-base text-4xl"
                     ></i>
                   </div>
                 </div>
@@ -870,18 +866,26 @@
 
           <!-- Middle Column (Image) -->
           <div class="order-1 lg:order-2 flex-1">
-            <img src="./images/whychoose1.png" alt="Image" class="w-full" />
+            <img
+              src="./images/whychoose1.png"
+              alt="Image"
+              class="w-full h-auto"
+            />
           </div>
 
           <!-- Column 3 -->
           <div class="bg-yellow- order-3 flex-1">
             <div class="mb-6">
               <div class="lg:flex lg:items-center flex-row-reverse text-center">
-                <div class="lg:flex lg:justify-end grid justify-center ml-2">
+                <div
+                  class="lg:flex lg:justify-end grid justify-center ml-2 lg:mb-0 mb-5"
+                >
                   <div
-                    class="w-10 h-10 rounded-full bg-[#E7E7E7] flex justify-center items-center"
+                    class="lg:w-10 lg:h-10 w-20 h-20 rounded-full bg-[#E7E7E7] flex justify-center items-center"
                   >
-                    <i class="fa fa-car text-[#909090] flex justify-center"></i>
+                    <i
+                      class="fa fa-car text-[#909090] flex justify-center lg:text-base text-4xl"
+                    ></i>
                   </div>
                 </div>
                 <h2
@@ -900,12 +904,14 @@
             </div>
             <div class="mb-6">
               <div class="lg:flex lg:items-center flex-row-reverse text-center">
-                <div class="lg:flex lg:justify-end grid justify-center ml-2">
+                <div
+                  class="lg:flex lg:justify-end grid justify-center ml-2 lg:mb-0 mb-5"
+                >
                   <div
-                    class="w-10 h-10 rounded-full bg-[#E7E7E7] flex justify-center items-center"
+                    class="lg:w-10 lg:h-10 w-20 h-20 rounded-full bg-[#E7E7E7] flex justify-center items-center"
                   >
                     <i
-                      class="fa fa-book text-[#909090] flex justify-center"
+                      class="fa fa-book text-[#909090] flex justify-center lg:text-base text-4xl"
                     ></i>
                   </div>
                 </div>
@@ -925,11 +931,15 @@
             </div>
             <div class="mb-6">
               <div class="lg:flex lg:items-center flex-row-reverse text-center">
-                <div class="lg:flex lg:justify-end grid justify-center ml-2">
+                <div
+                  class="lg:flex lg:justify-end grid justify-center ml-2 lg:mb-0 mb-5"
+                >
                   <div
-                    class="w-10 h-10 rounded-full bg-[#E7E7E7] flex justify-center items-center"
+                    class="lg:w-10 lg:h-10 w-20 h-20 rounded-full bg-[#E7E7E7] flex justify-center items-center"
                   >
-                    <i class="fa fa-eye text-[#909090] flex justify-center"></i>
+                    <i
+                      class="fa fa-eye text-[#909090] flex justify-center lg:text-base text-4xl"
+                    ></i>
                   </div>
                 </div>
                 <h2
@@ -949,7 +959,7 @@
           </div>
         </div>
       </section>
-      <!-- ./Whu choose us section section ends -->
+      <!-- ./Why choose us section section ends -->
     </main>
     <!-- ./Main section ends -->
 
@@ -960,7 +970,7 @@
         <h2 class="text-3xl font-bold text-white">Fruit Burst</h2>
       </div>
       <div
-        class="text-white grid lg:grid-cols-6 grid-cols-4 text-center justify-center gap-8 mt-5"
+        class="lg:flex grid grid-cols-4 text-center justify-center gap-4 mt-5"
       >
         <a href="#" class="text-xs text-[#888888]">Home</a>
         <a href="#" class="text-xs text-[#888888]">About Us</a>
@@ -969,13 +979,17 @@
         <a href="#" class="text-xs text-[#888888]">Support</a>
         <a href="#" class="text-xs text-[#888888]">MyAccount</a>
       </div>
-      <div class="text-white flex justify-center gap-8 mt-5">
-        <i class="fa fa-facebook text-2xl"></i>
-        <i class="fa fa-twitter text-2xl"></i>
-        <i class="fa fa-youtube text-2xl"></i>
-        <i class="fa fa-linkedin text-2xl"></i>
-        <i class="fa fa-instagram text-2xl"></i>
-        <i class="fa fa-apple text-2xl"></i>
+      <div class="text-white flex justify-center gap-8 mt-5 pb-3">
+        <i class="fa fa-facebook text-2xl cursor-pointer"></i>
+        <i class="fa fa-twitter text-2xl cursor-pointer"></i>
+        <i class="fa fa-youtube text-2xl cursor-pointer"></i>
+        <i class="fa fa-linkedin text-2xl cursor-pointer"></i>
+        <i class="fa fa-instagram text-2xl cursor-pointer"></i>
+        <i class="fa fa-apple text-2xl cursor-pointer"></i>
+      </div>
+      <div class="lg:border-b border-slate-600 w-3/12 mx-auto"></div>
+      <div class="text-center text-[#888888] mt-5">
+        <p class="text-xs">&copy; 2023 All rights reserved to Fruit Burst.</p>
       </div>
     </footer>
     <!-- ./Footer section ends -->
