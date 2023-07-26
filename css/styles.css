@@ -74,3 +74,6 @@ body {
   background-size: cover;
   border-radius: 0.5rem;
 }
+.decorated-text {
+  border-bottom: 2px solid #ddd;
+}
