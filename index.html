@@ -42,12 +42,12 @@
   </head>
   <body>
     <!-- Header section begins -->
-    <header>
+    <header class="hide-content">
       <!-- Navigation section begins -->
-      <section class="lg:px-44 bg-base-100 mx-auto">
+      <section class="lg:px-44 mx-auto">
         <!-- Navigation -->
         <div
-          class="navbar lg:bg-[#F85559] rounded-full md:my-10 lg:text-white md:px-5"
+          class="navbar lg:bg-[#F85559] rounded-full md:my-10 lg:text-white lg:px-5"
         >
           <div class="navbar-start">
             <div class="dropdown text-slate-900">
@@ -69,7 +69,7 @@
               </label>
               <ul
                 tabindex="0"
-                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box"
               >
                 <li><a>Home</a></li>
                 <li><a>About Us</a></li>
@@ -325,7 +325,7 @@
     <main class="max-w-screen-xl lg:mx-44 p-2">
       <!-- Deal of the day section begins -->
       <section class="">
-        <div class="lg:flex lgjustify-between gap-4 grid">
+        <div class="lg:flex lg:justify-between grid">
           <div class="space-y-6 flex-1">
             <h1 class="lg:text-4xl font-extrabold">Deal of the day</h1>
             <p class="text-sm">
@@ -338,7 +338,7 @@
             </p>
           </div>
           <div class="flex-1">
-            <div class="flex justify-end">
+            <div class="flex lg:justify-end justify-center">
               <div class="p-2">
                 <div class="inline-flex items-center">
                   <h4 class="text-4xl font-bold pr-3">29</h4>
@@ -378,30 +378,59 @@
               <img src="./images/fruit6.png" alt="Fruit" class="rounded-xl" />
             </figure>
             <div class="card-body items-center text-center">
-              <h2 class="card-title border-b-2">12.90$ - 18.85$</h2>
-              <p>Red Dragon</p>
+              <h2 class="card-title border-b-2 pb-2 lg:font-bold">
+                12.90$ - 18.85$
+              </h2>
+              <p class="font-bold">Apple</p>
               <div class="card-actions">
                 <i class="fa fa-star text-amber-300"></i>
                 <i class="fa fa-star text-amber-300"></i>
                 <i class="fa fa-star text-amber-300"></i>
                 <i class="fa fa-star text-amber-300"></i>
                 <i class="fa fa-star-half text-amber-300"></i>
-                <button class="btn" onclick="my_modal_1.showModal()">
-                  Details
-                </button>
               </div>
+              <button
+                class="btn flex mx-auto mt-2"
+                onclick="my_modal_1.showModal()"
+              >
+                Details
+              </button>
             </div>
           </div>
           <!-- Modal -->
           <dialog id="my_modal_1" class="modal">
-            <form method="dialog" class="modal-box">
-              <h3 class="font-bold text-lg">Hello!</h3>
-              <p class="py-4">
-                Press ESC key or click the button below to close
+            <form method="dialog" class="modal-box text-center">
+              <img
+                src="./images/fruit6.png"
+                alt="Fruit"
+                class="rounded-xl flex mx-auto mb-2"
+              />
+              <h3 class="text-2xl font-extrabold">Apple</h3>
+              <p class="py-4 text-xs">
+                Freshness and quality, our promise to you! At our fruit seller
+                site, we believe in offering only the best. Every fruit you
+                order undergoes rigorous quality checks.
               </p>
-              <div class="modal-action">
-                <!-- if there is a button in form, it will close the modal -->
-                <button class="btn">Close</button>
+              <h2 class="text-center pb-2 font-bold">
+                Price:&nbsp; 12.90$ - 18.85$
+              </h2>
+              <div class="text-center">
+                <i class="fa fa-star text-amber-300"></i>
+                <i class="fa fa-star text-amber-300"></i>
+                <i class="fa fa-star text-amber-300"></i>
+                <i class="fa fa-star text-amber-300"></i>
+                <i class="fa fa-star-half text-amber-300"></i>
+              </div>
+
+              <div class="modal-action border-t-2 pt-4">
+                <div class="flex justify-center mx-auto gap-4">
+                  <button class="btn btn-outline btn-secondary">Close</button>
+                  <button
+                    class="btn bg-[#F85559] capitalize text-white border-0 hover:text-amber-600"
+                  >
+                    Buy Now
+                  </button>
+                </div>
               </div>
             </form>
           </dialog>
@@ -412,29 +441,56 @@
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title border-b-2">12.90$ - 18.85$</h2>
-              <p>Red Dragon</p>
+              <p>Orange</p>
               <div class="card-actions">
                 <i class="fa fa-star text-amber-300"></i>
                 <i class="fa fa-star text-amber-300"></i>
                 <i class="fa fa-star text-amber-300"></i>
                 <i class="fa fa-star text-amber-300"></i>
                 <i class="fa fa-star-half text-amber-300"></i>
-                <button class="btn" onclick="my_modal_2.showModal()">
-                  Details
-                </button>
               </div>
+              <button
+                class="btn flex-flow-col mx-auto mt-2"
+                onclick="my_modal_2.showModal()"
+              >
+                Details
+              </button>
             </div>
           </div>
           <!-- Modal -->
           <dialog id="my_modal_2" class="modal">
-            <form method="dialog" class="modal-box">
-              <h3 class="font-bold text-lg">Hello!</h3>
-              <p class="py-4">
-                Press ESC key or click the button below to close
+            <form method="dialog" class="modal-box text-center">
+              <img
+                src="./images/fruit7.png"
+                alt="Fruit"
+                class="rounded-xl flex mx-auto mb-2"
+              />
+              <h3 class="text-2xl font-extrabold">Orange</h3>
+              <p class="py-4 text-xs">
+                Freshness and quality, our promise to you! At our fruit seller
+                site, we believe in offering only the best. Every fruit you
+                order undergoes rigorous quality checks.
               </p>
-              <div class="modal-action">
-                <!-- if there is a button in form, it will close the modal -->
-                <button class="btn">Close</button>
+              <h2 class="text-center pb-2 font-bold">
+                Price:&nbsp; 12.90$ - 18.85$
+              </h2>
+              <div class="text-center">
+                <i class="fa fa-star text-amber-300"></i>
+                <i class="fa fa-star text-amber-300"></i>
+                <i class="fa fa-star text-amber-300"></i>
+                <i class="fa fa-star text-amber-300"></i>
+                <i class="fa fa-star-half text-amber-300"></i>
+              </div>
+
+              <div class="modal-action border-t-2 pt-4">
+                <div class="flex justify-center mx-auto gap-4">
+                  <button class="btn btn-outline btn-secondary">Close</button>
+                  <button
+                    class="btn bg-[#F85559] capitalize text-white border-0 hover:text-amber-600"
+                  >
+                    Buy Now
+                  </button>
+                </div>
               </div>
             </form>
           </dialog>
@@ -453,22 +509,49 @@
                 <i class="fa fa-star text-amber-300"></i>
                 <i class="fa fa-star text-amber-300"></i>
                 <i class="fa fa-star-half text-amber-300"></i>
-                <button class="btn" onclick="my_modal_3.showModal()">
-                  Details
-                </button>
               </div>
+              <button
+                class="btn flex mx-auto mt-2"
+                onclick="my_modal_3.showModal()"
+              >
+                Details
+              </button>
             </div>
           </div>
           <!-- Modal -->
           <dialog id="my_modal_3" class="modal">
-            <form method="dialog" class="modal-box">
-              <h3 class="font-bold text-lg">Hello!</h3>
-              <p class="py-4">
-                Press ESC key or click the button below to close
+            <form method="dialog" class="modal-box text-center">
+              <img
+                src="./images/fruit8.png"
+                alt="Fruit"
+                class="rounded-xl flex mx-auto mb-2"
+              />
+              <h3 class="text-2xl font-extrabold">Red Dragon</h3>
+              <p class="py-4 text-xs">
+                Freshness and quality, our promise to you! At our fruit seller
+                site, we believe in offering only the best. Every fruit you
+                order undergoes rigorous quality checks.
               </p>
-              <div class="modal-action">
-                <!-- if there is a button in form, it will close the modal -->
-                <button class="btn">Close</button>
+              <h2 class="text-center pb-2 font-bold">
+                Price:&nbsp; 12.90$ - 18.85$
+              </h2>
+              <div class="text-center">
+                <i class="fa fa-star text-amber-300"></i>
+                <i class="fa fa-star text-amber-300"></i>
+                <i class="fa fa-star text-amber-300"></i>
+                <i class="fa fa-star text-amber-300"></i>
+                <i class="fa fa-star-half text-amber-300"></i>
+              </div>
+
+              <div class="modal-action border-t-2 pt-4">
+                <div class="flex justify-center mx-auto gap-4">
+                  <button class="btn btn-outline btn-secondary">Close</button>
+                  <button
+                    class="btn bg-[#F85559] capitalize text-white border-0 hover:text-amber-600"
+                  >
+                    Buy Now
+                  </button>
+                </div>
               </div>
             </form>
           </dialog>
@@ -479,29 +562,57 @@
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title border-b-2">12.90$ - 18.85$</h2>
-              <p>Red Dragon</p>
+              <p>Banana</p>
               <div class="card-actions">
                 <i class="fa fa-star text-amber-300"></i>
                 <i class="fa fa-star text-amber-300"></i>
                 <i class="fa fa-star text-amber-300"></i>
                 <i class="fa fa-star text-amber-300"></i>
                 <i class="fa fa-star-half text-amber-300"></i>
-                <button class="btn" onclick="my_modal_4.showModal()">
-                  Details
-                </button>
               </div>
+              <button
+                class="btn flex mx-auto mt-2"
+                onclick="my_modal_4.showModal()"
+              >
+                Details
+              </button>
             </div>
           </div>
           <!-- Modal -->
           <dialog id="my_modal_4" class="modal">
-            <form method="dialog" class="modal-box">
-              <h3 class="font-bold text-lg">Hello!</h3>
-              <p class="py-4">
-                Press ESC key or click the button below to close
+            <form method="dialog" class="modal-box text-center">
+              <img
+                src="./images/fruit9.png"
+                mb-2
+                alt="Fruit"
+                class="rounded-xl flex mx-auto mb-2"
+              />
+              <h3 class="text-2xl font-extrabold">Banana</h3>
+              <p class="py-4 text-xs">
+                Freshness and quality, our promise to you! At our fruit seller
+                site, we believe in offering only the best. Every fruit you
+                order undergoes rigorous quality checks.
               </p>
-              <div class="modal-action">
-                <!-- if there is a button in form, it will close the modal -->
-                <button class="btn">Close</button>
+              <h2 class="text-center pb-2 font-bold">
+                Price:&nbsp; 12.90$ - 18.85$
+              </h2>
+              <div class="text-center">
+                <i class="fa fa-star text-amber-300"></i>
+                <i class="fa fa-star text-amber-300"></i>
+                <i class="fa fa-star text-amber-300"></i>
+                <i class="fa fa-star text-amber-300"></i>
+                <i class="fa fa-star-half text-amber-300"></i>
+              </div>
+
+              <div class="modal-action border-t-2 pt-4">
+                <div class="flex justify-center mx-auto gap-4">
+                  <button class="btn btn-outline btn-secondary">Close</button>
+                  <button
+                    class="btn bg-[#F85559] capitalize text-white border-0 hover:text-amber-600"
+                  >
+                    Buy Now
+                  </button>
+                </div>
               </div>
             </form>
           </dialog>
@@ -518,11 +629,145 @@
       <!-- ./Deal of the day section ends -->
 
       <!-- Meet the team member section begins -->
-      <section class="max-w-screen-xl mx-auto lg:px-44 lg:mt-20 p-2"></section>
+      <section class="max-w-screen-xl mx-auto lg:mt-20 p-2">
+        <div class="meet-the-team bg-slider-one-bg relative">
+          <div
+            class="absolute top-0 left-0 w-full h-full bg-black opacity-50 group-hover:opacity-0 transition-opacity rounded-md"
+          ></div>
+          <div class="flex items-center h-full justify-center text-white">
+            <div class="z-50">
+              <div class="text-center space-y-7">
+                <h1 class="text-4xl font-extrabold">Meet the team section</h1>
+                <p class="w-1/2 mx-auto text-xs">
+                  Taste the goodness of nature with every bite! Our fruit seller
+                  site brings you the freshest.
+                </p>
+
+                <div
+                  class="lg:flex flex-direction-row gap-14 justify-between mt-5"
+                >
+                  <div class="">
+                    <img
+                      src="./images/member1.png"
+                      alt=""
+                      class="mx-auto lg:mt-0 mt-10"
+                    />
+                    <h1 class="mt-4 text-2xl font-extrabold">Halim Srdar</h1>
+                    <p class="mt-2 text-xs">Fruit Expert</p>
+                    <div
+                      class="lg:grid grid-cols-3 lg:justify-between lg:items-center flex justify-center space-x-2 mt-2"
+                    >
+                      <div
+                        class="w-10 h-10 rounded-full bg-[#F85559] flex justify-center items-center"
+                      >
+                        <i class="fa fa-facebook text-[#fff]"></i>
+                      </div>
+                      <div
+                        class="w-10 h-10 rounded-full bg-[#F85559] flex justify-center items-center"
+                      >
+                        <i class="fa fa-twitter text-[#fff]"></i>
+                      </div>
+                      <div
+                        class="w-10 h-10 rounded-full bg-[#F85559] flex justify-center items-center"
+                      >
+                        <i class="fa fa-linkedin text-[#fff]"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="">
+                    <img
+                      src="./images/member2.png"
+                      alt=""
+                      class="mx-auto lg:mt-0 mt-10"
+                    />
+                    <h1 class="mt-4 text-2xl font-extrabold">Dolly Jones</h1>
+                    <p class="mt-2 text-xs">Fruit Tester</p>
+                    <div
+                      class="lg:grid grid-cols-3 lg:justify-between lg:items-center flex justify-center space-x-2 mt-2"
+                    >
+                      <div
+                        class="w-10 h-10 rounded-full bg-[#F85559] flex justify-center items-center"
+                      >
+                        <i class="fa fa-facebook text-[#fff]"></i>
+                      </div>
+                      <div
+                        class="w-10 h-10 rounded-full bg-[#F85559] flex justify-center items-center"
+                      >
+                        <i class="fa fa-twitter text-[#fff]"></i>
+                      </div>
+                      <div
+                        class="w-10 h-10 rounded-full bg-[#F85559] flex justify-center items-center"
+                      >
+                        <i class="fa fa-linkedin text-[#fff]"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="">
+                    <img
+                      src="./images/member3.png"
+                      alt=""
+                      class="mx-auto lg:mt-0 mt-10"
+                    />
+                    <h1 class="mt-4 text-2xl font-extrabold">Musa Ali</h1>
+                    <p class="mt-2 text-xs">Fruit Manager</p>
+                    <div
+                      class="lg:grid grid-cols-3 lg:justify-between lg:items-center flex justify-center space-x-2 mt-2"
+                    >
+                      <div
+                        class="w-10 h-10 rounded-full bg-[#F85559] flex justify-center items-center"
+                      >
+                        <i class="fa fa-facebook text-[#fff]"></i>
+                      </div>
+                      <div
+                        class="w-10 h-10 rounded-full bg-[#F85559] flex justify-center items-center"
+                      >
+                        <i class="fa fa-twitter text-[#fff]"></i>
+                      </div>
+                      <div
+                        class="w-10 h-10 rounded-full bg-[#F85559] flex justify-center items-center"
+                      >
+                        <i class="fa fa-linkedin text-[#fff]"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="">
+                    <img
+                      src="./images/member4.png"
+                      alt=""
+                      class="mx-auto lg:mt-0 mt-10"
+                    />
+                    <h1 class="mt-4 text-2xl font-extrabold">Karina Khan</h1>
+                    <p class="mt-2 text-xs">Quality Expert</p>
+                    <div
+                      class="lg:grid grid-cols-3 lg:justify-between lg:items-center flex justify-center space-x-2 mt-2"
+                    >
+                      <div
+                        class="w-10 h-10 rounded-full bg-[#F85559] flex justify-center items-center"
+                      >
+                        <i class="fa fa-facebook text-[#fff]"></i>
+                      </div>
+                      <div
+                        class="w-10 h-10 rounded-full bg-[#F85559] flex justify-center items-center"
+                      >
+                        <i class="fa fa-twitter text-[#fff]"></i>
+                      </div>
+                      <div
+                        class="w-10 h-10 rounded-full bg-[#F85559] flex justify-center items-center"
+                      >
+                        <i class="fa fa-linkedin text-[#fff]"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- ./Meet the team member section ends -->
 
       <!--Whu choose us section section begins -->
-      <section class="max-w-screen-xl mx-auto lg:px-44 lg:mt-20 p-2"></section>
+      <section class="max-w-screen-xl mx-auto lg:mt-20 w-full"></section>
       <!-- ./Whu choose us section section ends -->
     </main>
     <!-- ./Main section ends -->
